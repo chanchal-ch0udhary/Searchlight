@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag "users_index.css" %>
+
+<div class="Link">
+<%= link_to 'LOG IN/SIGN UP',new_session_path %>
+</div>
+<div class="text-center">
+<h1> USERS </h1>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>S/No</th>
+            <th>Profile</th>
+            <th>Name</th>
+            <th>Bio</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% $i=1%>
+        <% @users.each do |user| %>
+        <tr>
+            <td><%= $i %></td>
+            <td> <% if user.image.attached? %>
+                        <div>
+                            <%= image_tag(url_for(user.image),class:"resize-image-index") %>
+                        </div>
+                <% end %>
+            </td>
+            <td><%= user.name %></td>
+            <td><%= user.bio %></td>
+            <td><%= link_to 'View Profile',"/users/view/#{user.id}" %></td>
+        <% $i+=1 %>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

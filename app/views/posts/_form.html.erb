@@ -1,0 +1,14 @@
+<%= form_with(model:[@user,@post],url:user_posts_path(@user),method: :post,local:true) do |form| %>
+
+    <div>
+    <%= form.label :Post%>    <br>
+    <%= form.file_field :image %>
+    </div>
+
+    <div>
+    <%= form.label :Caption%>    <br>
+    <%= form.text_field :description %>
+    </div>
+
+    <%= form.submit "POST" %><br><br>
+<% end %>

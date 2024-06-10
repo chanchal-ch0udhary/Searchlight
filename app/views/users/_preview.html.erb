@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag "users_show.css" %>
+<nav class="navbar navbar-light">
+  <%= link_to 'Explore', users_path %>
+  <%= image_tag(url_for(current_user.image), class: "resize-profile") if current_user.image.attached? %>
+  <%= content_tag :h6, current_user.welcome %>
+  <%= link_to "Sign out", new_session_path, data: { "turbo-method": :delete,"turbo_confirm": "Are you sure,You want to sign out!" } %>
+</nav>
+
+<div class="profile-container">
+  <div class="media border p-3">
+    <%= render 'users/attachment' %>
+    <div class="profile-details">
+      <h2><%= @user.name %></h2>
+      <p><strong>Bio:</strong> <%= @user.bio %></p>
+    </div>
+    <% if current_user == @user %>
+        <div class="profile-actions">
+        <%= link_to 'Edit profile', edit_user_path, class: "btn btn-primary" %>
+        <%= link_to 'Create a new Post', new_user_post_path(@user), class: "btn btn-primary" %>
+        <%= link_to 'Delete account', user_path(@user),data: { turbo_method: :delete,turbo_confirm: 'Are you sure,You want to delete account?' }, class: "btn btn-primary" %>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<% if @user.posts.any? %>
+<div class="posts-container">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <%= image_tag(url_for(post.image), class: "resize-post") if post.image.attached? %>
+      <h6><%= post.description %></h6><br>
+      <%= link_to "View Post",user_post_path(current_user.id,post.id),class: "btn-primary" %>
+      <%= button_to "Like","/users/#{current_user.id}/posts/#{post.id}/likes", class: "btn-primary" %>
+      Likes-<%= post.likes.count %>
+    </div>
+  <% end %>
+<% end %>
+</div>

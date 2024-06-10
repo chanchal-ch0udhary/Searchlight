@@ -1,0 +1,56 @@
+/* Add this to your application.css or application.scss file */
+
+/* Link styling */
+.Link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .Link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  /* Table styling */
+  .text-center {
+    text-align: center;
+  }
+  
+  .table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Profile image styling */
+  .resize-image-index {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+  }
+  
+  /* View Profile link styling */
+  .View-Profile-Link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+  

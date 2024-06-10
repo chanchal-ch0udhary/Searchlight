@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag "posts_show.css" %>
+
+<nav class="navbar navbar-light">
+  <%= link_to 'Explore', users_path %>
+  <%= image_tag(url_for(current_user.image), class: "resize-profile") if current_user.image.attached? %>
+  <%= content_tag :h6, current_user.welcome %>
+  <%= link_to "Sign out", new_session_path, data: { "turbo-method": :delete,"turbo_confirm": "Are you sure,You want to sign out!" } %>
+</nav>
+<div class="post_show">
+    <%= image_tag(url_for(@post.image)) if @post.image.attached? %>
+</div>

@@ -1,0 +1,52 @@
+/* Add this to your application.css or application.scss file */
+
+/* Navbar styling */
+.navbar {
+    background-color: #3498db;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .resize-profile {
+    max-width: 20px;
+    border-radius: 30%;
+  }
+  
+  h6 {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  /* Post show styling */
+  .post_show {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Likes count styling */
+  .post_show {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Post image styling */
+  .post_show img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  

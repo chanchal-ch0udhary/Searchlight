@@ -1,0 +1,118 @@
+/* app/assets/stylesheets/users_show.css */
+
+/* Navbar styling */
+.navbar {
+    background-color: #3498db;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  .resize-profile {
+    max-width: 40px;
+    border-radius: 50%;
+  }
+  
+  h6 {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  /* Profile container styling */
+  .profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Media (profile details and actions) styling */
+  .media {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Profile details styling */
+  .profile-details {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .profile-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-details p {
+    margin: 0;
+    color: #555;
+  }
+  
+  /* Profile actions styling */
+  .profile-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .btn-primary {
+    margin: 5px 0;
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Posts container styling */
+  .posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Post styling */
+  .post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .resize-post {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .post h6 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+  }
+  
